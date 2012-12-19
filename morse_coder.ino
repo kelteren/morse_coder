@@ -1,74 +1,50 @@
 int led = 13;
 
-int mDot = 250;
-int mDash = 750;
+int dot = 250;
+int dash = 750;
+int space = 750;
+int wordspace = 1750;
 
 void setup() {
   pinMode(led, OUTPUT);
 }
 
+void mDot() {
+  digitalWrite(led, HIGH);
+  delay(dot);
+  digitalWrite(led, LOW);
+}
+
+void mDash() {
+  digitalWrite(led, HIGH);
+  delay(dash);
+  digitalWrite(led, LOW);
+}
+
+function mose(String text) {
+  
+}
+
 void loop () {
-  /* G */
-  dash();
-  dash();
-  dot();
-  /* G */
+  mDash();
+  delay(dot);
+  mDash();
+  delay(dot);
+  mDot();
+  delay(dash);
   
-  delay(500);
+  mDash();
+  delay(dot);
+  mDash();
+  delay(dot);
+  mDash();
+  delay(dash);
   
-  /* O */
-  dash();
-  dash();
-  dash();
-  /* O */
-  
-  delay(500);
-  
-  /* D */
-  dash();
-  dot();
-  dot();
-  /* D */
-  
-  delay(1500);
-  
-  /* J */
-  dot();
-  dash();
-  dash();
-  dash();
-  /* J */
-  
-  delay(500);
-  
-  /* U */
-  dot();
-  dot();
-  dash();
-  /* U */
-  
-  delay(500);
-  
-  /* L */
-  dot();
-  dash();
-  dot();
-  dot();
-  /* L */
-  
-  delay(1500);
+  mDash();
+  delay(dot);
+  mDot();
+  delay(dot);
+  mDot();
+  delay(wordspace);
 }
 
-void dash() {
-  digitalWrite(led, HIGH);
-  delay(mDash);
-  digitalWrite(led, LOW);
-  delay(mDot);
-}
-
-void dot() {
-  digitalWrite(led, HIGH);
-  delay(mDot);
-  digitalWrite(led, LOW);
-  delay(mDot);
-}
