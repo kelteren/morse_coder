@@ -21,30 +21,20 @@ void mDash() {
   digitalWrite(led, LOW);
 }
 
-function mose(String text) {
+void morse(String text) {
+  int i = 0;
   
+  // my cousin called so this won't work just yet :p
+  while (i < text.length()) {
+    char thisChar = text[i];
+    if (thisChar = ".") {
+      mDot();
+      delay(dot);
+    }
+  }
 }
 
 void loop () {
-  mDash();
-  delay(dot);
-  mDash();
-  delay(dot);
-  mDot();
-  delay(dash);
-  
-  mDash();
-  delay(dot);
-  mDash();
-  delay(dot);
-  mDash();
-  delay(dash);
-  
-  mDash();
-  delay(dot);
-  mDot();
-  delay(dot);
-  mDot();
-  delay(wordspace);
+  morse(".");
 }
 
