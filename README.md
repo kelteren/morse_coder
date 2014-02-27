@@ -8,7 +8,7 @@ space, and wordspace.
 
 Example inputs for the function:
 
-morse("... --- .../")
+morse("...---.../")
   * This is the standard emergency signal, SOS. It consists of three letters, and ended by a wordspace. A space is
     always entered between each letter or number.
   * The slash represents a wordspace, providing a pause in transmission before the message is repeated.
